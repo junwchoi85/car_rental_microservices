@@ -1,0 +1,27 @@
+2024-08-28 16:43:22,528 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-28 16:44:25,421 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-28 16:44:31,410 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)

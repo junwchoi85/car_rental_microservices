@@ -1,0 +1,1621 @@
+2024-08-27 08:09:29,160 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 08:24:07,346 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 08:24:23,521 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 08:24:25,729 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 08:25:41,264 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 08:25:44,872 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 11:25:21,123 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('admin',)
+2024-08-27 11:25:32,664 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:25:35,215 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 11:38:42,716 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:38:44,301 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 11:40:27,284 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:40:29,601 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 11:41:20,934 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:41:20,934 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car
+            WHERE car_code = ?
+             with params: ('car-002',)
+2024-08-27 11:41:20,935 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car_detail
+            WHERE car_id = ?
+            AND status = 'Available'
+            ORDER BY RANDOM()
+            LIMIT 1
+             with params: (1,)
+2024-08-27 11:41:20,936 - db_logger - DEBUG - Executing query: 
+            INSERT INTO booking (cst_id, car_dtl_id, start_date, end_date, total_fee, status)
+            VALUES (?, ?, ?, ?, ?, ?)
+             with params: (1, 8, '2024-09-01', '2024-09-23', 923.78, 'reserved')
+2024-08-27 11:46:23,348 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:46:24,110 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 11:46:43,537 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:46:43,537 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car
+            WHERE car_code = ?
+             with params: ('car-002',)
+2024-08-27 11:46:43,537 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car_detail
+            WHERE car_id = ?
+            AND status = 'Available'
+            ORDER BY RANDOM()
+            LIMIT 1
+             with params: (1,)
+2024-08-27 11:46:43,537 - db_logger - DEBUG - Executing query: 
+            INSERT INTO booking (cst_id, car_dtl_id, start_date, end_date, total_fee, status)
+            VALUES (?, ?, ?, ?, ?, ?)
+             with params: (1, 10, '2024-09-01', '2024-09-23', 923.78, 'reserved')
+2024-08-27 11:49:33,235 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:50:42,535 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:50:44,388 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:50:44,388 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)
+2024-08-27 11:51:14,809 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:51:16,341 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:51:16,341 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)
+2024-08-27 11:51:43,827 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 11:57:00,219 - db_logger - DEBUG - Executing query: 
+            SELECT cst_code FROM customer ORDER BY cst_id DESC LIMIT 1
+             with params: ()
+2024-08-27 11:57:00,220 - db_logger - DEBUG - Executing query: 
+            INSERT INTO customer (cst_code, username, password)
+            VALUES (?, ?, ?)
+             with params: ('cst-0004', 'jc', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4')
+2024-08-27 11:57:11,149 - db_logger - DEBUG - Executing query: 
+            SELECT cst_code FROM customer ORDER BY cst_id DESC LIMIT 1
+             with params: ()
+2024-08-27 11:57:11,151 - db_logger - DEBUG - Executing query: 
+            INSERT INTO customer (cst_code, username, password)
+            VALUES (?, ?, ?)
+             with params: ('cst-0004', 'jc5', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4')
+2024-08-27 11:57:46,375 - db_logger - DEBUG - Executing query: 
+            SELECT cst_code FROM customer ORDER BY cst_id DESC LIMIT 1
+             with params: ()
+2024-08-27 11:57:46,377 - db_logger - DEBUG - Executing query: 
+            INSERT INTO customer (cst_code, username, password)
+            VALUES (?, ?, ?)
+             with params: ('cst-0005', 'jc6', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4')
+2024-08-27 11:57:47,881 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 12:39:28,389 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 14:26:36,005 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 14:48:59,031 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 14:49:01,335 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 14:52:31,962 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 14:52:34,532 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:03:56,660 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:03:58,309 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:05:49,959 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:05:53,729 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:06:22,294 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:06:23,307 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:06:58,361 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:06:59,284 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:07:57,335 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:07:58,223 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:08:06,158 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:08:55,621 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:08:57,064 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:13:07,495 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:13:10,601 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:13:16,510 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:13:23,778 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:13:33,441 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:17:44,715 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:17:45,920 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:23:05,485 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:23:07,949 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:24:27,961 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:24:36,648 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:25:42,550 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:25:43,665 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:26:38,353 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:26:39,607 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:27:14,663 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:27:15,545 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:27:46,602 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('1',)
+2024-08-27 15:28:00,667 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:28:02,063 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:41:02,691 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:41:06,221 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:43:56,552 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:43:57,764 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:44:41,405 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:44:42,195 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:44:44,758 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:45:15,569 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:45:16,202 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:45:20,399 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:46:08,598 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:46:39,251 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:46:40,490 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:50:42,312 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:50:45,475 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:50:48,790 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:51:04,879 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:51:10,750 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:51:21,912 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:51:30,225 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 15:51:58,362 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('1',)
+2024-08-27 15:52:05,937 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:52:45,512 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 15:53:26,808 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:53:32,842 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 15:53:50,945 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:53:54,585 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 15:54:21,129 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:56:45,326 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:57:47,059 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:58:28,437 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:59:00,404 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 15:59:14,582 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:01:32,415 - db_logger - DEBUG - Executing query: 
+            SELECT cst_code FROM customer ORDER BY cst_id DESC LIMIT 1
+             with params: ()
+2024-08-27 16:01:32,417 - db_logger - DEBUG - Executing query: 
+            INSERT INTO customer (cst_code, username, password)
+            VALUES (?, ?, ?)
+             with params: ('cst-0002', 'jc', '03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4')
+2024-08-27 16:01:49,654 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:02:57,277 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 20)
+2024-08-27 16:04:57,012 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('a',)
+2024-08-27 16:05:04,020 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:05:06,462 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:05:15,721 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:05:16,809 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:05:22,661 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:05:45,308 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:05:50,400 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 20)
+2024-08-27 16:06:14,380 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:06:15,624 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:06:20,422 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 20)
+2024-08-27 16:06:24,774 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:06:49,238 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 20)
+2024-08-27 16:08:04,751 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:09:54,273 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('ㅓㅊ',)
+2024-08-27 16:10:00,750 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:10:02,720 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:10:13,767 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:11:21,580 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:11:21,580 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car
+            WHERE car_code = ?
+             with params: ('car-011',)
+2024-08-27 16:11:21,581 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car_detail
+            WHERE car_id = ?
+            AND status = 'Available'
+            ORDER BY RANDOM()
+            LIMIT 1
+             with params: (10,)
+2024-08-27 16:11:21,581 - db_logger - DEBUG - Executing query: 
+            INSERT INTO booking (cst_id, car_dtl_id, start_date, end_date, total_fee, status)
+            VALUES (?, ?, ?, ?, ?, ?)
+             with params: (1, 96, '2024-09-11', '2024-09-23', 695.52, 'reserved')
+2024-08-27 16:12:04,873 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:12:04,874 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)
+2024-08-27 16:12:59,134 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:12:59,135 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)
+2024-08-27 16:13:03,183 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-27 16:13:17,383 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:13:17,383 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car
+            WHERE car_code = ?
+             with params: ('car-002',)
+2024-08-27 16:13:17,383 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM car_detail
+            WHERE car_id = ?
+            AND status = 'Available'
+            ORDER BY RANDOM()
+            LIMIT 1
+             with params: (1,)
+2024-08-27 16:13:17,384 - db_logger - DEBUG - Executing query: 
+            INSERT INTO booking (cst_id, car_dtl_id, start_date, end_date, total_fee, status)
+            VALUES (?, ?, ?, ?, ?, ?)
+             with params: (1, 10, '2024-09-09', '2024-10-01', 923.78, 'reserved')
+2024-08-27 16:13:44,370 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 16:13:52,560 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 16:13:58,014 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-27 16:16:15,072 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 16:17:25,897 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 16:17:29,102 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-27 16:18:44,974 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-27 16:19:50,509 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-27 16:20:00,330 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-27 16:20:07,000 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-27 16:20:30,682 - db_logger - DEBUG - Executing query: 
+            UPDATE booking
+            SET status = ?
+            WHERE booking_id = ?
+             with params: ('confirmed', 1)
+2024-08-27 16:21:23,974 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:21:25,560 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 16:21:25,561 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)
+2024-08-27 20:40:22,973 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 20:40:32,662 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 20:40:34,278 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM customer WHERE username = ?
+             with params: ('jc',)
+2024-08-27 20:40:34,279 - db_logger - DEBUG - Executing query: 
+            SELECT  c.car_code,
+                    c.name,
+                    c.year,
+                    c.passenger,
+                    c.transmission,
+                    c.luggage_large,
+                    c.luggage_small,
+                    c.engine,
+                    c.fuel,
+                    b.start_date,
+                    b.end_date,
+                    b.total_fee,
+                    b.status
+            FROM car c
+            JOIN car_detail cd ON c.car_id = cd.car_id
+            JOIN booking b ON cd.car_dtl_id = b.car_dtl_id
+            WHERE b.cst_id = ?
+             with params: (1,)

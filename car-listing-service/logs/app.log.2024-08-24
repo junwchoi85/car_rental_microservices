@@ -1,0 +1,294 @@
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,938 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - ['test2', 1]
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:33:41,939 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,206 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - ['test3', 1]
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:34:15,207 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:36:09,170 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:36:09,170 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:36:09,170 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:36:09,170 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:36:09,170 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:36:09,170 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:36:09,170 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:36:09,170 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:36:09,170 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:36:09,170 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:36:09,170 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:36:09,170 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:37:19,492 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:37:19,492 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:37:19,492 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:37:19,492 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 09:37:19,493 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:37:19,493 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:37:19,493 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:37:19,493 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 09:37:19,493 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:37:19,493 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:37:19,493 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:37:19,493 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 12:54:37,131 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 12:54:37,131 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 12:54:37,131 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 12:54:37,131 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ? WHERE car_id = ?
+2024-08-24 12:54:37,132 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 12:54:37,132 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 12:54:37,132 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 12:54:37,132 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 1]
+2024-08-24 12:54:37,132 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 12:54:37,132 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 12:54:37,132 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 12:54:37,132 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:11,690 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:11,690 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:11,690 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:11,690 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:11,690 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:11,690 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:11,690 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:11,690 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:11,690 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:11,690 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:11,690 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:11,690 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,719 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:25,719 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:25,719 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:25,719 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:05:25,719 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:25,719 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:25,719 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:25,719 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:05:25,719 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,719 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,719 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,719 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:05:25,720 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,520 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:08:29,520 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:08:29,520 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:08:29,520 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:08:29,520 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:08:29,520 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:08:29,520 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:08:29,520 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:08:29,520 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,520 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,520 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,520 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:08:29,521 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,459 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:09:07,459 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:09:07,459 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:09:07,459 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 13:09:07,459 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:09:07,459 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:09:07,459 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:09:07,459 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 13:09:07,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:09:07,460 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,987 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:19:46,990 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,458 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:21:39,459 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,284 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 13:27:55,286 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,252 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:20:22,252 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:20:22,252 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:20:22,252 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:20:22,253 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:20:22,253 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:20:22,253 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:20:22,253 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:20:22,253 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,253 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,253 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,253 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:20:22,254 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,273 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:31:19,273 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:31:19,273 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:31:19,273 - app_logger - DEBUG - UPDATE car SET name = ?, year = ?, passenger = ?, transmission = ?, luggage_large = ?, luggage_small = ?, engine = ?, fuel = ?, status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['Test Car', '2021', 4, 'Automatic', 2, 1, 'V6', 'Gasoline', 'inactive', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,274 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,274 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,274 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - UPDATE car SET status = ? WHERE car_id = ?
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,274 - app_logger - DEBUG - ['deleted', 1]
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 14:31:19,275 - app_logger - DEBUG - Update car info query built successfully

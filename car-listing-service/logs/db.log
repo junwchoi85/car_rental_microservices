@@ -1,0 +1,79 @@
+2024-08-29 14:44:13,712 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 14:45:57,264 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 14:48:59,316 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 14:49:02,470 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 14:49:13,220 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-29 14:49:17,701 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 14:49:20,083 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 14:58:35,423 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 14:58:39,018 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 15:00:25,665 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 15:00:27,085 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-29 15:00:32,459 - db_logger - DEBUG - Executing query: 
+            SELECT 
+                car.car_id,
+                car.car_code,
+                car.name,
+                car.year,
+                car.passenger,
+                car.transmission,
+                car.luggage_large,
+                car.luggage_small,
+                car.engine,
+                car.fuel,
+                car.status,
+                crt.price_per_day
+            FROM 
+                car car,
+                car_rental_terms crt
+            where car.CAR_id = crt.car_id
+            and car.status = 'ACTIVE'
+            LIMIT ? OFFSET ?
+         with params: (10, 0)
+2024-08-29 15:00:36,768 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 15:28:37,665 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 15:28:46,057 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-29 15:31:02,386 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 15:31:06,270 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 15:31:09,363 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-29 15:31:14,172 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-29 15:31:56,112 - db_logger - DEBUG - Executing query: 
+            SELECT * FROM user WHERE username = ?
+             with params: ('admin',)
+2024-08-29 15:32:03,782 - db_logger - DEBUG - Executing query: SELECT * FROM booking with params: []
+2024-08-29 15:32:05,416 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']
+2024-08-29 15:32:08,696 - db_logger - DEBUG - Executing query: SELECT * FROM booking WHERE status = ? with params: ['reserved']

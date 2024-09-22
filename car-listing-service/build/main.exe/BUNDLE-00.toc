@@ -1,0 +1,3 @@
+([('main.exe',
+   '/Users/jc/projects/MSE800/asgmt_one/dist/main.exe',
+   'EXECUTABLE')],)

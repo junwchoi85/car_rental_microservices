@@ -1,0 +1,47 @@
+2024-08-23 05:07:12,942 - app_logger - ERROR - RuntimeError occurred during sign up: Integrity error occurred: UNIQUE constraint failed: customer.username
+2024-08-23 09:58:41,067 - app_logger - ERROR - RuntimeError occurred during sign up: Integrity error occurred: UNIQUE constraint failed: customer.username
+2024-08-23 11:28:21,100 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:28:21,100 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:28:21,100 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:33:13,823 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:33:13,823 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:33:13,823 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:35:55,682 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:35:55,682 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 11:35:55,682 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 12:27:00,737 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 12:27:00,737 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 12:27:00,737 - app_logger - DEBUG - query: SELECT * FROM booking WHERE cst_id = ?, query_params: [1]
+2024-08-23 13:24:52,663 - app_logger - DEBUG - query: SELECT * FROM booking, query_params: []
+2024-08-23 13:24:52,663 - app_logger - DEBUG - query: SELECT * FROM booking, query_params: []
+2024-08-23 13:24:52,663 - app_logger - DEBUG - query: SELECT * FROM booking, query_params: []
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,762 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,766 - app_logger - DEBUG - ['test', 1]
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:29:53,767 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,236 - app_logger - DEBUG - UPDATE car SET name = ? WHERE car_id = ?
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,237 - app_logger - DEBUG - ['hi', 1]
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
+2024-08-24 09:31:05,238 - app_logger - DEBUG - Update car info query built successfully
