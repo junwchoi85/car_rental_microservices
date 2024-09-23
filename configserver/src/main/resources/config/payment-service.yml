@@ -1,0 +1,10 @@
+build:
+  version: "0.1.0"
+
+payment-service:
+  message: "Welcome to Classic Crew's Payments related prod APIs. Please refer to the API documentation for more details."
+  contactDetails:
+    name: "Jun Hwan Choi - Product Owner"
+    email: "dev@classiccrew.com"
+  onCallSupport:
+    - (027) 888-8888
