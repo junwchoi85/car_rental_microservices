@@ -5,3 +5,4 @@ dist/
 # Ignore everything under the env directory
 **/env/
 **/djangotutorial/
+.vscode/
