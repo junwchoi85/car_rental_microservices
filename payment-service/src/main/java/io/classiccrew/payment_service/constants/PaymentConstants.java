@@ -1,7 +1,7 @@
 package io.classiccrew.payment_service.constants;
 
-public class PaymentsConstants {
-    private PaymentsConstants() {
+public class PaymentConstants {
+    private PaymentConstants() {
         // restrict instantiation
     }
 
