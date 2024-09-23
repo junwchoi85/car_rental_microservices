@@ -2,12 +2,21 @@ spring:
   application:
     name: "configserver"
   profiles:
-    active: native
+    # active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: "classpath:/config"
+        # native:
+        #   search-locations: "classpath:/config"
+        git:
+          uri: "https://github.com/junwchoi85/car_rental_config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+          username: "junwchoi85"
+          password: "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"
 
 management:
   endpoints:
