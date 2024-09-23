@@ -2,11 +2,11 @@ package io.classiccrew.payment_service.service;
 
 public interface IPaymentsService {
 
-    void requestPayment(String entity);
+    void createPayment(String entity);
 
-    void checkPaymentResult(String param);
+    void fetchPayment(String param);
 
-    void requestRefund(String entity);
+    void updatePayment(String entity);
 
-    void getPaymentStatus();
+    void deletePayment(String entity);
 }

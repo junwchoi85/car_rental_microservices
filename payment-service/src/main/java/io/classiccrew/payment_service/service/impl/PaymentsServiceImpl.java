@@ -1,30 +1,37 @@
 package io.classiccrew.payment_service.service.impl;
 
+import org.springframework.stereotype.Service;
 import io.classiccrew.payment_service.service.IPaymentsService;
+import lombok.AllArgsConstructor;
 
+@Service
+@AllArgsConstructor
 public class PaymentsServiceImpl implements IPaymentsService {
 
     @Override
-    public void requestPayment(String entity) {
-
+    public void createPayment(String entity) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'createPayment'");
     }
 
     @Override
-    public void checkPaymentResult(String param) {
+    public void fetchPayment(String param) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'checkPaymentResult'");
+        throw new UnsupportedOperationException("Unimplemented method 'fetchPayment'");
     }
 
     @Override
-    public void requestRefund(String entity) {
+    public void updatePayment(String entity) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'requestRefund'");
+        throw new UnsupportedOperationException("Unimplemented method 'updatePayment'");
     }
 
     @Override
-    public void getPaymentStatus() {
+    public void deletePayment(String entity) {
         // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getPaymentStatus'");
+        throw new UnsupportedOperationException("Unimplemented method 'deletePayment'");
     }
+
+
 
 }

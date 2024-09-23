@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.classiccrew.payment_service.constants.PaymentsConstants;
 import io.classiccrew.payment_service.dto.ResponseDto;
 import io.classiccrew.payment_service.service.IPaymentsService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,12 +15,16 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-
+@Tag(name = "Payments", description = "The Payments API")
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 public class PaymentsController {
 
-    private IPaymentsService iPaymentsService;
+    private final IPaymentsService iPaymentsService;
+
+    public PaymentsController(IPaymentsService iPaymentsService) {
+        this.iPaymentsService = iPaymentsService;
+    }
 
     @Value("${build.version}")
     private String buildVersion;
