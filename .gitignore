@@ -1,5 +1,7 @@
 .DS_Store
-car-listing-service/env/
 **/__pycache__/
-build/*
-dist/*
+build/
+dist/
+# Ignore everything under the env directory
+**/env/
+**/djangotutorial/
