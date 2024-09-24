@@ -1,3 +1,6 @@
+server:
+  port: 8888
+
 spring:
   application:
     name: "configserver"
@@ -17,6 +20,11 @@ spring:
           force-pull: true
           username: "junwchoi85"
           password: "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"
+#   rabbitmq:
+#     host: "localhost"
+#     port: 5672
+#     username: "guest"
+#     password: "guest"
 
 management:
   endpoints:
@@ -33,5 +41,5 @@ management:
       probes:
         enabled: true
 
-server:
-  port: 8888
+encrypt:
+  key: "FpSWLp7AG9LuV2NMCG2Yh3egmldaSXFh/9/aLOb1ykE="
