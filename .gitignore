@@ -6,3 +6,4 @@ dist/
 **/env/
 **/djangotutorial/
 .vscode/
+car-listing-service/.DS_Store

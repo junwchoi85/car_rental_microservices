@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from rental.interfaces.controllers.bookings_controller import BookingsController
+
 urlpatterns = [
-    path('api/', include('infrastructure.framework.urls'))
+    path('api/', include('infrastructure.framework.urls')),
+    path('bookings/', BookingsController.as_view(), name='bookings-create'),
+    path('bookings/<int:booking_id>/',
+         BookingsController.as_view(), name='bookings-detail'),
 ]
