@@ -20,6 +20,22 @@ public class GatewayserverApplication {
                 .filters(f -> f
                         .rewritePath("/classiccrew/payment-service/(?<segment>.*)", "/${segment}")
                         .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
-                .uri("lb://PAYMENT-SERVICE")).build();
+                .uri("lb://PAYMENT-SERVICE"))
+                .route(p -> p.path("/classiccrew/booking-service/**")
+                        .filters(f -> f.rewritePath("/classiccrew/booking-service/(?<segment>.*)",
+                                "/${segment}").addResponseHeader("X-Response-Time",
+                                        LocalDateTime.now().toString()))
+                        .uri("lb://BOOKING-SERVICE"))
+                .route(p -> p.path("/classiccrew/car-listing-service/**").filters(
+                        f -> f.rewritePath("/classiccrew/car-listing-service/(?<segment>.*)",
+                                "/${segment}").addResponseHeader("X-Response-Time",
+                                        LocalDateTime.now().toString()))
+                        .uri("lb://CAR-LISTING-SERVICE"))
+                .route(p -> p.path("/classiccrew/user-service/**")
+                        .filters(f -> f.rewritePath("/classiccrew/user-service/(?<segment>.*)",
+                                "/${segment}").addResponseHeader("X-Response-Time",
+                                        LocalDateTime.now().toString()))
+                        .uri("lb://USER-SERVICE"))
+                .build();
     }
 }
