@@ -10,7 +10,7 @@ import lombok.AllArgsConstructor;
 
 @Service
 @AllArgsConstructor
-public class UsersSErviceImpl implements IUsersService {
+public class UsersServiceImpl implements IUsersService {
     private UsersRepository usersRepository;
 
     @Override

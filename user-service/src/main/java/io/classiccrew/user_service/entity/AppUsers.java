@@ -1,11 +1,8 @@
 package io.classiccrew.user_service.entity;
 
-import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Getter
@@ -14,6 +11,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AppUsers extends BaseEntity {
+    
+    @Id
+	@GeneratedValue(strategy= GenerationType.AUTO,generator="native")
+	@GenericGenerator(name = "native",strategy = "native")
     private Long ausrId;
     private String email;
     private String username;

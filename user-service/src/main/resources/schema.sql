@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS app_users (
   email VARCHAR(90) NOT NULL,
   username VARCHAR(45) NOT NULL,
   password VARCHAR(45) NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-  created_by VARCHAR(45) DEFAULT 'system' NOT NULL,
-  updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  created_at TIMESTAMP NOT NULL,
+  created_by VARCHAR(45)  NOT NULL,
+  updated_at TIMESTAMP DEFAULT NULL,
   updated_by VARCHAR(45),
   UNIQUE (username),
   UNIQUE (email)

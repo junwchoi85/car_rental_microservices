@@ -1,7 +1,7 @@
 package io.classiccrew.user_service.constants;
 
-public final class UserConstants {
-    private UserConstants() {}
+public final class UsersConstants {
+    private UsersConstants() {}
 
     public static final String STATUS_201 = "201";
     public static final String MESSAGE_201 = "Loan created successfully";
