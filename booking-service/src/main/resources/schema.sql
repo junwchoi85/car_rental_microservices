@@ -7,21 +7,21 @@ CREATE SCHEMA IF NOT EXISTS mydb;
 SET SCHEMA mydb;
 
 -- -----------------------------------------------------
--- Table app_users
+-- Table customers
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS app_users;
+DROP TABLE IF EXISTS customers;
 
-CREATE TABLE IF NOT EXISTS app_users (
-  ausr_id INT AUTO_INCREMENT PRIMARY KEY,
-  email VARCHAR(90) NOT NULL,
+CREATE TABLE IF NOT EXISTS customers (
+  customer_id INT AUTO_INCREMENT PRIMARY KEY,
+  customer_code VARCHAR(7) NOT NULL,
   username VARCHAR(45) NOT NULL,
   password VARCHAR(45) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   created_by VARCHAR(45) DEFAULT 'system' NOT NULL,
-  updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  updated_by VARCHAR(45),
-  UNIQUE (username),
-  UNIQUE (email)
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP NOT NULL,
+  updated_by VARCHAR(45) NOT NULL,
+  UNIQUE (customer_code),
+  UNIQUE (username)
 );
 
 -- -----------------------------------------------------
@@ -74,11 +74,11 @@ CREATE TABLE IF NOT EXISTS cars (
   luggage_small INT NOT NULL,
   engine VARCHAR(45) NOT NULL,
   fuel VARCHAR(45) NOT NULL,
-  status VARCHAR(45) CHECK (status IN ('active', 'inactive', 'deleted')),
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   created_by VARCHAR(7) DEFAULT 'system' NOT NULL,
   updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   updated_by VARCHAR(7),
+  status VARCHAR(45) CHECK (status IN ('active', 'inactive', 'deleted')),
   UNIQUE (car_code)
 );
 
@@ -126,9 +126,8 @@ DROP TABLE IF EXISTS bookings;
 
 CREATE TABLE IF NOT EXISTS bookings (
   booking_id INT AUTO_INCREMENT PRIMARY KEY,
-  ausr_id INT NOT NULL,
+  customer_id INT NOT NULL,
   car_detail_id INT NOT NULL,
-  booking_code VARCHAR(45) NOT NULL,
   start_date TIMESTAMP,
   end_date TIMESTAMP,
   total_fee FLOAT,
@@ -137,9 +136,8 @@ CREATE TABLE IF NOT EXISTS bookings (
   created_by VARCHAR(7) DEFAULT 'system' NOT NULL,
   updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   updated_by VARCHAR(7),
-  FOREIGN KEY (ausr_id) REFERENCES app_users(ausr_id),
-  FOREIGN KEY (car_detail_id) REFERENCES car_details(car_detail_id),
-  UNIQUE (booking_code)
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+  FOREIGN KEY (car_detail_id) REFERENCES car_details(car_detail_id)
 );
 
 -- -----------------------------------------------------
@@ -151,7 +149,7 @@ CREATE TABLE IF NOT EXISTS promotions (
   promotion_id INT AUTO_INCREMENT PRIMARY KEY,
   promotion_code VARCHAR(45) NOT NULL,
   description TEXT,
-  discount_rate DECIMAL(5,2),
+  discount_rate DECIMAL(2,2),
   dt_start TIMESTAMP,
   dt_end TIMESTAMP,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
@@ -204,16 +202,16 @@ DROP TABLE IF EXISTS payments;
 CREATE TABLE IF NOT EXISTS payments (
   payment_id INT AUTO_INCREMENT PRIMARY KEY,
   booking_id INT,
-  ausr_id INT,
+  customer_id INT,
   amount DECIMAL(10,2) NOT NULL,
   payment_date TIMESTAMP,
-  payment_status VARCHAR(45) COMMENT '결제 status : pending, completed, failed',
-  transaction_id VARCHAR(100) COMMENT '결제 제공업체의 거래 ID',
+  payment_status VARCHAR(45) NOT NULL COMMENT '결제 status : pending, completed, failed',
+  transaction_id VARCHAR(100) COMMENT '결제 제공업체의 거래 ID\n',
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
   created_by VARCHAR(7) DEFAULT 'system' NOT NULL,
   updated_at TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   updated_by VARCHAR(7),
-  FOREIGN KEY (ausr_id) REFERENCES app_users(ausr_id),
-  FOREIGN KEY (booking_id) REFERENCES bookings(booking_id),
-  UNIQUE (transaction_id)
+  UNIQUE (transaction_id),
+  FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+  FOREIGN KEY (booking_id) REFERENCES bookings(booking_id)
 );
