@@ -31,6 +31,11 @@ public class GatewayserverApplication {
                                 "/${segment}").addResponseHeader("X-Response-Time",
                                         LocalDateTime.now().toString()))
                         .uri("lb://CAR-LISTING-SERVICE"))
+                .route(p -> p.path("/classiccrew/user-service/**")
+                        .filters(f -> f.rewritePath("/classiccrew/user-service/(?<segment>.*)",
+                                "/${segment}").addResponseHeader("X-Response-Time",
+                                        LocalDateTime.now().toString()))
+                        .uri("lb://USER-SERVICE"))
                 .build();
     }
 }
