@@ -13,6 +13,8 @@ import io.classiccrew.user_service.dto.ResponseDto;
 import io.classiccrew.user_service.service.IUsersService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -27,10 +29,16 @@ public class UsersController {
     IUsersService usersService;
 
     @PostMapping("create-appuser")
-    public ResponseEntity<ResponseDto> postMethodName(@RequestBody AppUsersDto dto) {
+    public ResponseEntity<ResponseDto> createAppUser(@RequestBody AppUsersDto dto) {
         usersService.createUser(dto);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(new ResponseDto(UsersConstants.STATUS_200, UsersConstants.MESSAGE_200));
+    }
+
+    @GetMapping("fetch-appuser")
+    public ResponseEntity<AppUsersDto> fetchAppUser(@RequestParam String email) {
+        AppUsersDto appUsersDto = usersService.getAppUserByEmail(email);
+        return ResponseEntity.status(HttpStatus.OK).body(appUsersDto);
     }
 
 

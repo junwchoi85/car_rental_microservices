@@ -3,6 +3,7 @@ package io.classiccrew.user_service.service.impl;
 import org.springframework.stereotype.Service;
 import io.classiccrew.user_service.dto.AppUsersDto;
 import io.classiccrew.user_service.entity.AppUsers;
+import io.classiccrew.user_service.exception.ResourceNotFoundException;
 import io.classiccrew.user_service.mapper.UsersMapper;
 import io.classiccrew.user_service.repository.UsersRepository;
 import io.classiccrew.user_service.service.IUsersService;
@@ -18,6 +19,14 @@ public class UsersServiceImpl implements IUsersService {
         AppUsers appUsers = new AppUsers();
         UsersMapper.toUsers(dto, appUsers);
         usersRepository.save(appUsers);
+    }
+
+    @Override
+    public AppUsersDto getAppUserByEmail(String email) {
+
+        AppUsers appUsers = usersRepository.findByEmail(email)
+                .orElseThrow(() -> new ResourceNotFoundException("AppUser", "email", email));
+        return UsersMapper.toUsersDto(appUsers, new AppUsersDto());
     }
 
 

@@ -12,10 +12,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.classiccrew.booking_service.constants.BookingsConstants;
+import io.classiccrew.booking_service.dto.AppUsersDto;
 import io.classiccrew.booking_service.dto.BookingsDto;
 import io.classiccrew.booking_service.dto.ResponseDto;
 import io.classiccrew.booking_service.service.IBookingsService;
+import io.classiccrew.booking_service.service.client.UserServiceFeignClient;
 import jakarta.validation.Valid;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -26,6 +31,8 @@ public class BookingsController {
 
     @Autowired
     private IBookingsService iBookingsService;
+    @Autowired
+    private UserServiceFeignClient userServiceFeignClient;
 
     @PostMapping("/book")
     public ResponseEntity<ResponseDto> postMethodName(@Valid @RequestBody BookingsDto dto) {
@@ -36,4 +43,15 @@ public class BookingsController {
 
     }
 
+    @GetMapping("/test")
+    public String getMethodName(@RequestParam String email) {
+        ResponseEntity<AppUsersDto> test = userServiceFeignClient.fetchAppUser(email);
+        System.out.println(test.getBody().getEmail());
+        return new String();
+    }
+
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
 }
