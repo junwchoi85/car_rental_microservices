@@ -5,6 +5,7 @@ import io.classiccrew.user_service.entity.AppUsers;
 
 public class UsersMapper {
     public static AppUsersDto toUsersDto(AppUsers users, AppUsersDto usersDto) {
+        usersDto.setAusrId(users.getAusrId());
         usersDto.setEmail(users.getEmail());
         usersDto.setUsername(users.getUsername());
         usersDto.setPassword(users.getPassword());
@@ -12,6 +13,7 @@ public class UsersMapper {
     }
 
     public static AppUsers toUsers(AppUsersDto usersDto, AppUsers users) {
+        users.setAusrId(usersDto.getAusrId());
         users.setEmail(usersDto.getEmail());
         users.setUsername(usersDto.getUsername());
         users.setPassword(usersDto.getPassword());

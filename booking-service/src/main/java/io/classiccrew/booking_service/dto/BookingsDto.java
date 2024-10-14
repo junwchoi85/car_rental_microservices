@@ -6,11 +6,12 @@ import lombok.Data;
 @Schema(name = "Bookings")
 @Data
 public class BookingsDto {
-    private Long customerId;
-    private Long carDetailId;
-    private String bookingCode;
-    private String startDate;
-    private String endDate;
-    private Float totalFee;
-    private String status;
+    private String pickUpBranch;
+    private String dropOffBranch;
+    private String pickUpDate;
+    private String dropOffDate;
+    private String pickUpTime;
+    private String dropOffTime;
+    private String carCode;
+    private String userEmail;
 }

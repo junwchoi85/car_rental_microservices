@@ -11,7 +11,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.classiccrew.car_listing_service.dto.CarsDto;
+import io.classiccrew.car_listing_service.dto.VehicleDto;
 import io.classiccrew.car_listing_service.service.ICarsService;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -33,4 +36,22 @@ public class CarsController {
         return ResponseEntity.status(HttpStatus.OK).body(carList);
     }
 
+    @GetMapping("/vehicles")
+    public ResponseEntity<List<VehicleDto>> fetchVehiclesList() {
+        logger.info("Fetching vehicles list");
+        List<VehicleDto> vehicleList = iCarsService.fetchVehiclesList();
+        return ResponseEntity.status(HttpStatus.OK).body(vehicleList);
+    }
+
+    @GetMapping("/fetch")
+    public ResponseEntity<VehicleDto> fetchCarInfo(@RequestParam String vehicleCode) {
+        VehicleDto vehicle = iCarsService.fetchVehicleInfo(vehicleCode);
+        return ResponseEntity.status(HttpStatus.OK).body(vehicle);
+    }
+
+
+    @GetMapping("/ping")
+    public String ping() {
+        return "pong";
+    }
 }
