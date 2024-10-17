@@ -1,10 +1,14 @@
 package io.classiccrew.booking_service.entity;
 
+import java.time.LocalDateTime;
 import org.hibernate.annotations.GenericGenerator;
+import io.classiccrew.booking_service.dto.VehicleDto;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +27,15 @@ public class Bookings {
     @GenericGenerator(name = "native", strategy = "native")
     private Long bookingId;
     private Long ausrId;
-    private Long vehicleId;
+    // private Long vehicleId;
+
+    @ManyToOne
+    @JoinColumn(name = "vehicle_id", nullable = false)
+    private Vehicle vehicle;
+
     private String bookingCode;
-    private String startDate;
-    private String endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private String pickupBranch;
     private String dropOffBranch;
     private Float totalFee;

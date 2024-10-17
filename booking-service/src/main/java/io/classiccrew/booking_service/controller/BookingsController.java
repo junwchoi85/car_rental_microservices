@@ -1,5 +1,6 @@
 package io.classiccrew.booking_service.controller;
 
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +36,7 @@ public class BookingsController {
     private UserServiceFeignClient userServiceFeignClient;
 
     @PostMapping("/book")
-    public ResponseEntity<ResponseDto> postMethodName(@Valid @RequestBody BookingsDto dto) {
+    public ResponseEntity<ResponseDto> createBooking(@Valid @RequestBody BookingsDto dto) {
         iBookingsService.bookCar(dto);
 
         return ResponseEntity.status(HttpStatus.OK)
@@ -43,12 +44,12 @@ public class BookingsController {
 
     }
 
-    @GetMapping("/test")
-    public String getMethodName(@RequestParam String email) {
-        ResponseEntity<AppUsersDto> test = userServiceFeignClient.fetchAppUser(email);
-        System.out.println(test.getBody().getEmail());
-        return new String();
+    @GetMapping("/history")
+    public ResponseEntity<List<BookingsDto>> fetchBookingHistory(@RequestParam String email) {
+        List<BookingsDto> bookingHistory = iBookingsService.fetchBookingHistory(email);
+        return ResponseEntity.status(HttpStatus.OK).body(bookingHistory);
     }
+
 
     @GetMapping("/ping")
     public String ping() {

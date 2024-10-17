@@ -9,5 +9,7 @@ public interface ICarsService {
 
     List<VehicleDto> fetchVehiclesList();
 
-    public VehicleDto fetchVehicleInfo(String vehicleCode);
+    public VehicleDto fetchVehicleInfoByCode(String vehicleCode);
+
+    public VehicleDto fetchVehicleInfoById(Long vehicleId);
 }

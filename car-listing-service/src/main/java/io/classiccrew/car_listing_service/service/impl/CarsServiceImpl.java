@@ -34,9 +34,17 @@ public class CarsServiceImpl implements ICarsService {
     }
 
     @Override
-    public VehicleDto fetchVehicleInfo(String vehicleCode) {
+    public VehicleDto fetchVehicleInfoByCode(String vehicleCode) {
         Vehicle vehicle = vehicleRepository.findByVehicleCode(vehicleCode).orElseThrow(
                 () -> new ResourceNotFoundException("Vehicle", "vehicleCode", vehicleCode));
+        return VehicleMapper.mapToDto(vehicle, new VehicleDto());
+    }
+
+    @Override
+    public VehicleDto fetchVehicleInfoById(Long vehicleId) {
+        Vehicle vehicle = vehicleRepository.findByVehicleId(vehicleId)
+                .orElseThrow(() -> new ResourceNotFoundException("Vehicle", "vehicleId",
+                        String.valueOf(vehicleId)));
         return VehicleMapper.mapToDto(vehicle, new VehicleDto());
     }
 

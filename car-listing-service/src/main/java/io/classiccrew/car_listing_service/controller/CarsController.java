@@ -44,10 +44,17 @@ public class CarsController {
     }
 
     @GetMapping("/fetch")
-    public ResponseEntity<VehicleDto> fetchCarInfo(@RequestParam String vehicleCode) {
-        VehicleDto vehicle = iCarsService.fetchVehicleInfo(vehicleCode);
+    public ResponseEntity<VehicleDto> fetchVehicleInfoByCode(@RequestParam String vehicleCode) {
+        VehicleDto vehicle = iCarsService.fetchVehicleInfoByCode(vehicleCode);
         return ResponseEntity.status(HttpStatus.OK).body(vehicle);
     }
+
+    @GetMapping("vehicle-info-by-id")
+    public ResponseEntity<VehicleDto> fetchVehicleInfoById(@RequestParam String vehicleId) {
+        VehicleDto vehicle = iCarsService.fetchVehicleInfoById(Long.valueOf(vehicleId));
+        return ResponseEntity.status(HttpStatus.OK).body(vehicle);
+    }
+
 
 
     @GetMapping("/ping")

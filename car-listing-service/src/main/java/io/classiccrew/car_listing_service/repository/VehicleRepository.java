@@ -8,4 +8,6 @@ import io.classiccrew.car_listing_service.entity.Vehicle;
 @Repository
 public interface VehicleRepository extends JpaRepository<Vehicle, Long> {
     Optional<Vehicle> findByVehicleCode(String vehicleCode);
+
+    Optional<Vehicle> findByVehicleId(Long vehicleId);
 }

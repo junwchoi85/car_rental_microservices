@@ -1,13 +1,18 @@
 package io.classiccrew.booking_service.service.impl;
 
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import io.classiccrew.booking_service.dto.AppUsersDto;
 import io.classiccrew.booking_service.dto.BookingsDto;
 import io.classiccrew.booking_service.dto.VehicleDto;
 import io.classiccrew.booking_service.entity.Bookings;
+import io.classiccrew.booking_service.entity.Vehicle;
+import io.classiccrew.booking_service.mapper.BookingsMapper;
+import io.classiccrew.booking_service.mapper.VehicleMapper;
 import io.classiccrew.booking_service.repository.BookingsRepository;
 import io.classiccrew.booking_service.service.IBookingsService;
 import io.classiccrew.booking_service.service.client.CarListingServiceFeignClient;
@@ -35,17 +40,27 @@ public class BookingsServiceImpl implements IBookingsService {
         bookings.setAusrId(asurId);
 
         // Fetch Vehicle details
-        String vehicleCode = bookingDto.getCarCode();
-        ResponseEntity<VehicleDto> vehicleDto = carServiceFeignClient.fetchCarInfo(vehicleCode);
+        String vehicleCode = bookingDto.getVehicleCode();
+        ResponseEntity<VehicleDto> vehicleDto =
+                carServiceFeignClient.fetchVehicleInfoByCode(vehicleCode);
         if (vehicleDto == null || vehicleDto.getBody() == null) {
             return false;
         }
-        Long vehicleId = vehicleDto.getBody().getVehicleId();
-        bookings.setVehicleId(vehicleId);
+
+        VehicleDto vehicleDetails = vehicleDto.getBody();
+        Vehicle vehicleEntity = new Vehicle();
+        bookings.setVehicle(VehicleMapper.mapToEntity(vehicleDetails, vehicleEntity));
 
         // Set Booking code
         bookings.setBookingCode(generateBookingCode());
 
+        bookings.setPickupBranch(bookingDto.getPickUpBranch());
+        String dropOffBranch = bookingDto.getDropOffBranch();
+        if (dropOffBranch == null || dropOffBranch.isEmpty()) {
+            dropOffBranch = bookingDto.getPickUpBranch();
+        }
+        bookings.setDropOffBranch(dropOffBranch);
+        BookingsMapper.mapToEntity(bookingDto, bookings);
 
         bookingsRepository.save(bookings);
         return true;
@@ -61,5 +76,23 @@ public class BookingsServiceImpl implements IBookingsService {
         return "B" + String.format("%04d", codeNumber);
     }
 
+    @Override
+    public List<BookingsDto> fetchBookingHistory(String email) {
 
+        // Fetch user details
+        ResponseEntity<AppUsersDto> appUserDto = userServiceFeignClient.fetchAppUser(email);
+        if (appUserDto == null || appUserDto.getBody() == null) {
+            return List.of();
+        }
+        Long asurId = appUserDto.getBody().getAusrId();
+        Optional<List<Bookings>> optionalBookingsList = bookingsRepository.findByAusrId(asurId);
+        if (optionalBookingsList.isEmpty()) {
+            return List.of();
+        }
+        List<Bookings> bookingsList = optionalBookingsList.get();
+
+        List<BookingsDto> bookinsDtoList = bookingsList.stream().map(BookingsMapper::convertToDto)
+                .collect(Collectors.toList());
+        return bookinsDtoList;
+    }
 }

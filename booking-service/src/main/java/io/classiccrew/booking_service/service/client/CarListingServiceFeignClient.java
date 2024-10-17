@@ -10,5 +10,8 @@ import io.classiccrew.booking_service.dto.VehicleDto;
 public interface CarListingServiceFeignClient {
 
     @GetMapping(value = "/api/fetch", consumes = "application/json")
-    public ResponseEntity<VehicleDto> fetchCarInfo(@RequestParam String vehicleCode);
+    public ResponseEntity<VehicleDto> fetchVehicleInfoByCode(@RequestParam String vehicleCode);
+
+    @GetMapping("vehicle-info-by-id")
+    public ResponseEntity<VehicleDto> fetchVehicleInfoById(@RequestParam String vehicleId);
 }
