@@ -1,0 +1,99 @@
+services:
+  carrentaldb:
+    container_name: carrentaldb
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: carrentaldb
+      # MYSQL_USER: db_user
+      # MYSQL_PASSWORD: db_password
+    extends:
+      file: common-config.yml
+      service: microservice-db-config
+
+  configserver:
+    image: classiccrew/configserver
+    container_name: configserver-ms
+    ports:
+      - "8888:8888"
+    healthcheck:
+      test: "curl --fail --silent localhost:8888/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    extends:
+      file: common-config.yml
+      service: microservice-base-config
+    environment:
+      SPRING_APPLICATION_NAME: "configserver"
+
+  eurekaserver:
+    image: classiccrew/eurekaserver
+    container_name: eurekaserver-ms
+    ports:
+      - "8070:8070"
+    healthcheck:
+      test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+    extends:
+      file: common-config.yml
+      service: microservice-configserver-config
+    environment:
+      SPRING_APPLICATION_NAME: "eurekaserver"
+
+  booking-service:
+    image: classiccrew/booking-service
+    container_name: booking-service-ms
+    ports:
+      - "8090:8090"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+    environment:
+      SPRING_APPLICATION_NAME: "booking-service"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/carrentaldb"
+    depends_on:
+      carrentaldb:
+        condition: service_healthy
+
+  # car-listing-service:
+  #   image: classiccrew/car-listing-service
+  #   container_name: car-listing-service-ms
+  #   ports:
+  #     - "8300:8300"
+  #   extends:
+  #     file: common-config.yml
+  #     service: microservice-base-config
+  #   environment:
+  #     SPRING_APPLICATION_NAME: "car-listing-service"
+
+  # payment-service:
+  #   image: classiccrew/payment-service
+  #   container_name: payment-service-ms
+  #   ports:
+  #     - "8200:8200"
+  #   extends:
+  #     file: common-config.yml
+  #     service: microservice-base-config
+  #   environment:
+  #     SPRING_APPLICATION_NAME: "payment-service"
+
+  # user-service:
+  #   image: classiccrew/user-service
+  #   container_name: user-service-ms
+  #   ports:
+  #     - "8400:8400"
+  #   extends:
+  #     file: common-config.yml
+  #     service: microservice-base-config
+  #   environment:
+  #     SPRING_APPLICATION_NAME: "user-service"
+
+networks:
+  classiccrew:
+    driver: bridge
