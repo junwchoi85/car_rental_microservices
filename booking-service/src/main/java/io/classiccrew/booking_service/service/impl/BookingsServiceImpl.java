@@ -27,12 +27,13 @@ public class BookingsServiceImpl implements IBookingsService {
     private CarListingServiceFeignClient carServiceFeignClient;
 
     @Override
-    public boolean bookCar(BookingsDto bookingDto) {
+    public boolean bookCar(String correlationId, BookingsDto bookingDto) {
         Bookings bookings = new Bookings();
 
         // Fetch user details
         String userEmail = bookingDto.getUserEmail();
-        ResponseEntity<AppUsersDto> appUserDto = userServiceFeignClient.fetchAppUser(userEmail);
+        ResponseEntity<AppUsersDto> appUserDto =
+                userServiceFeignClient.fetchAppUser(correlationId, userEmail);
         if (appUserDto == null || appUserDto.getBody() == null) {
             return false;
         }
@@ -42,7 +43,7 @@ public class BookingsServiceImpl implements IBookingsService {
         // Fetch Vehicle details
         String vehicleCode = bookingDto.getVehicleCode();
         ResponseEntity<VehicleDto> vehicleDto =
-                carServiceFeignClient.fetchVehicleInfoByCode(vehicleCode);
+                carServiceFeignClient.fetchVehicleInfoByCode(correlationId, vehicleCode);
         if (vehicleDto == null || vehicleDto.getBody() == null) {
             return false;
         }
@@ -77,10 +78,11 @@ public class BookingsServiceImpl implements IBookingsService {
     }
 
     @Override
-    public List<BookingsDto> fetchBookingHistory(String email) {
+    public List<BookingsDto> fetchBookingHistory(String correlationId, String email) {
 
         // Fetch user details
-        ResponseEntity<AppUsersDto> appUserDto = userServiceFeignClient.fetchAppUser(email);
+        ResponseEntity<AppUsersDto> appUserDto =
+                userServiceFeignClient.fetchAppUser(correlationId, email);
         if (appUserDto == null || appUserDto.getBody() == null) {
             return List.of();
         }

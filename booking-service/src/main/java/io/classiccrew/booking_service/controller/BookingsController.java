@@ -8,19 +8,19 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import io.classiccrew.booking_service.constants.BookingsConstants;
-import io.classiccrew.booking_service.dto.AppUsersDto;
 import io.classiccrew.booking_service.dto.BookingsDto;
 import io.classiccrew.booking_service.dto.ResponseDto;
 import io.classiccrew.booking_service.service.IBookingsService;
 import io.classiccrew.booking_service.service.client.UserServiceFeignClient;
 import jakarta.validation.Valid;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -32,12 +32,14 @@ public class BookingsController {
 
     @Autowired
     private IBookingsService iBookingsService;
-    @Autowired
-    private UserServiceFeignClient userServiceFeignClient;
 
     @PostMapping("/book")
-    public ResponseEntity<ResponseDto> createBooking(@Valid @RequestBody BookingsDto dto) {
-        iBookingsService.bookCar(dto);
+    public ResponseEntity<ResponseDto> createBooking(
+            @RequestHeader("correlation-id") String correlationId,
+            @Valid @RequestBody BookingsDto dto) {
+
+        logger.info("correlation-id in createBooking: {}", correlationId);
+        iBookingsService.bookCar(correlationId, dto);
 
         return ResponseEntity.status(HttpStatus.OK)
                 .body(new ResponseDto(BookingsConstants.STATUS_200, BookingsConstants.MESSAGE_200));
@@ -45,8 +47,10 @@ public class BookingsController {
     }
 
     @GetMapping("/history")
-    public ResponseEntity<List<BookingsDto>> fetchBookingHistory(@RequestParam String email) {
-        List<BookingsDto> bookingHistory = iBookingsService.fetchBookingHistory(email);
+    public ResponseEntity<List<BookingsDto>> fetchBookingHistory(
+            @RequestHeader("correlation-id") String correlationId, @RequestParam String email) {
+        List<BookingsDto> bookingHistory =
+                iBookingsService.fetchBookingHistory(correlationId, email);
         return ResponseEntity.status(HttpStatus.OK).body(bookingHistory);
     }
 

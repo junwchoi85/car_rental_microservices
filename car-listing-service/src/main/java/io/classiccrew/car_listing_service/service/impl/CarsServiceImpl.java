@@ -34,7 +34,7 @@ public class CarsServiceImpl implements ICarsService {
     }
 
     @Override
-    public VehicleDto fetchVehicleInfoByCode(String vehicleCode) {
+    public VehicleDto fetchVehicleInfoByCode(String vehicleCode, String correlationId) {
         Vehicle vehicle = vehicleRepository.findByVehicleCode(vehicleCode).orElseThrow(
                 () -> new ResourceNotFoundException("Vehicle", "vehicleCode", vehicleCode));
         return VehicleMapper.mapToDto(vehicle, new VehicleDto());

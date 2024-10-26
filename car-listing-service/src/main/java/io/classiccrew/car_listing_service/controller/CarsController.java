@@ -8,6 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import io.classiccrew.car_listing_service.dto.CarsDto;
@@ -44,8 +45,11 @@ public class CarsController {
     }
 
     @GetMapping("/fetch")
-    public ResponseEntity<VehicleDto> fetchVehicleInfoByCode(@RequestParam String vehicleCode) {
-        VehicleDto vehicle = iCarsService.fetchVehicleInfoByCode(vehicleCode);
+    public ResponseEntity<VehicleDto> fetchVehicleInfoByCode(
+            @RequestHeader("correlation-id") String correlationId,
+            @RequestParam String vehicleCode) {
+        logger.debug("correlation-id in fetchVehicleInfoByCode: {}", correlationId);
+        VehicleDto vehicle = iCarsService.fetchVehicleInfoByCode(vehicleCode, correlationId);
         return ResponseEntity.status(HttpStatus.OK).body(vehicle);
     }
 
