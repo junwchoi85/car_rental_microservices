@@ -47,3 +47,9 @@ info:
     name: "car-listing-service"
     description: "Car Listing Service"
     version: "0.1.0"
+
+logging:
+  level:
+    io:
+      classiccrew:
+        car-listing-service: DEBUG

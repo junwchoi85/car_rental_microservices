@@ -42,3 +42,9 @@ info:
     name: "user-service"
     description: "User Application"
     version: "0.1.0"
+
+logging:
+  level:
+    io:
+      classiccrew:
+        user-service: DEBUG

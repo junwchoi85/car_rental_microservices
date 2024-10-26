@@ -47,3 +47,9 @@ info:
     name: "payment-service"
     description: "Payment Application"
     version: "0.1.0"
+
+logging:
+  level:
+    io:
+      classiccrew:
+        payment-service: DEBUG
