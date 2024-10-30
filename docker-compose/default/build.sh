@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of service directories
-services=("configserver" "eurekaserver" "booking-service" "car-listing-service" "payment-service" "user-service")
+services=("configserver" "eurekaserver" "booking-service" "car-listing-service" "payment-service" "user-service" "gatewayserver")
 
 # Loop through each service directory and run jib:dockerBuild
 for service in "${services[@]}"; do

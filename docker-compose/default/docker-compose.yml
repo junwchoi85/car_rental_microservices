@@ -5,9 +5,11 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: carrentaldb
+      MYSQL_DATABASE: car_rental_db
       # MYSQL_USER: db_user
       # MYSQL_PASSWORD: db_password
+    volumes:
+      - car_rental_db_data:/var/lib/mysql
     extends:
       file: common-config.yml
       service: microservice-db-config
@@ -16,9 +18,9 @@ services:
     image: classiccrew/configserver
     container_name: configserver-ms
     ports:
-      - "8888:8888"
+      - "8071:8071"
     healthcheck:
-      test: "curl --fail --silent localhost:8888/actuator/health/readiness | grep UP || exit 1"
+      test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
       timeout: 5s
       retries: 20
@@ -26,14 +28,15 @@ services:
     extends:
       file: common-config.yml
       service: microservice-base-config
-    environment:
-      SPRING_APPLICATION_NAME: "configserver"
 
   eurekaserver:
     image: classiccrew/eurekaserver
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
+    depends_on:
+      configserver:
+        condition: service_healthy 
     healthcheck:
       test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
       interval: 10s
@@ -51,49 +54,124 @@ services:
     container_name: booking-service-ms
     ports:
       - "8090:8090"
-    extends:
-      file: common-config.yml
-      service: microservice-eureka-config
+    healthcheck:
+      test: "curl --fail --silent localhost:8090/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
     environment:
       SPRING_APPLICATION_NAME: "booking-service"
-      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/carrentaldb"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/car_rental_db"
     depends_on:
       carrentaldb:
         condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
 
-  # car-listing-service:
-  #   image: classiccrew/car-listing-service
-  #   container_name: car-listing-service-ms
-  #   ports:
-  #     - "8300:8300"
-  #   extends:
-  #     file: common-config.yml
-  #     service: microservice-base-config
-  #   environment:
-  #     SPRING_APPLICATION_NAME: "car-listing-service"
+  car-listing-service:
+    image: classiccrew/car-listing-service
+    container_name: car-listing-service-ms
+    ports:
+      - "8300:8300"
+    healthcheck:
+      test: "curl --fail --silent localhost:8300/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    environment:
+      SPRING_APPLICATION_NAME: "car-listing-service"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/car_rental_db"
+    depends_on:
+      carrentaldb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
 
-  # payment-service:
-  #   image: classiccrew/payment-service
-  #   container_name: payment-service-ms
-  #   ports:
-  #     - "8200:8200"
-  #   extends:
-  #     file: common-config.yml
-  #     service: microservice-base-config
-  #   environment:
-  #     SPRING_APPLICATION_NAME: "payment-service"
+  payment-service:
+    image: classiccrew/payment-service
+    container_name: payment-service-ms
+    ports:
+      - "8200:8200"
+    depends_on:
+      carrentaldb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8200/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    environment:
+      SPRING_APPLICATION_NAME: "payment-service"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/car_rental_db"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
 
-  # user-service:
-  #   image: classiccrew/user-service
-  #   container_name: user-service-ms
-  #   ports:
-  #     - "8400:8400"
-  #   extends:
-  #     file: common-config.yml
-  #     service: microservice-base-config
-  #   environment:
-  #     SPRING_APPLICATION_NAME: "user-service"
+  user-service:
+    image: classiccrew/user-service
+    container_name: user-service-ms
+    ports:
+      - "8400:8400"
+    healthcheck:
+      test: "curl --fail --silent localhost:8400/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    depends_on:
+      carrentaldb:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "user-service"
+      SPRING_DATASOURCE_URL: "jdbc:mysql://carrentaldb:3306/car_rental_db"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
+  gatewayserver:
+    image: classiccrew/gatewayserver
+    container_name: gatewayserver-ms
+    ports:
+      - "8080:8080"
+    depends_on:
+      # booking-service:
+      #   condition: service_healthy
+      # car-listing-service:
+      #   condition: service_healthy
+      payment-service:
+        condition: service_healthy
+      # user-service:
+      #   condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "gatewayserver"
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+
 
 networks:
   classiccrew:
-    driver: bridge
+    driver: "bridge"
+volumes:
+  car_rental_db_data:

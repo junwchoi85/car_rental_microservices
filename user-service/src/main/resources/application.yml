@@ -11,7 +11,7 @@ spring:
   jpa:
     show-sql: true
   config:
-    import: "optional:configserver:http://localhost:8888/"
+    import: "optional:configserver:http://localhost:8071/"
 
 management:
   endpoints:
@@ -20,6 +20,14 @@ management:
         include: "*"
   endpoint:
     shutdown:
+      enabled: true
+    health:
+      probes:
+        enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
       enabled: true
   info:
     env:
