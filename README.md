@@ -1,7 +1,7 @@
 # Car Rental Microservice Backend
 
 ## Project Description
-A Spring Boot-based microservice architecture for managing a car rental application backend. This system is designed to be scalable, secure, and efficient, supporting real-time booking, user management, and branch location services.
+This project is a Spring Boot based microservice for managing a car rental application backend, developed as part of the MSE800 Software Engineering course at Yoobee College. his system is designed to be scalable, secure, and efficient, supporting real-time booking, user management, and branch location services.
 
 ## Architecture
 
